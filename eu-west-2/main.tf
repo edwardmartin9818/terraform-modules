@@ -10,14 +10,11 @@ terraform {
 }
 
 provider "aws" {
-  region  = "eu-west-2"
+  region = "eu-west-2"
 }
 
-resource "aws_instance" "app_server" {
-  ami           = "ami-0b026d11830afcbac"
-  instance_type = "t2.micro"
-
-  tags = {
-    Name = "RenamedInstance"
-  }
+module "ec2_instance" {
+  source            = "../modules/my_ec2_instance"
+  ec2_ami_id        = "ami-020737107b4baaa50"
+  ec2_instance_name = "InstanceFromModule"
 }
