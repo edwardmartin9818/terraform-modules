@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 module "ec2_instance" {
-  source            = "../modules/my_ec2_instance"
+  source            = "github.com/edwardmartin9818/terraform-modules/modules/my_ec2_instance"
   ec2_ami_id        = "ami-020737107b4baaa50"
-  ec2_instance_name = "InstanceFromModule"
+  ec2_instance_name = "InstanceFromModule2"
 }
