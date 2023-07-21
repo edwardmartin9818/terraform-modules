@@ -10,14 +10,14 @@ terraform {
 }
 
 provider "aws" {
-  region  = "us-west-2"
+  region  = "eu-west-2"
 }
 
 resource "aws_instance" "app_server" {
-  ami           = "ami-020737107b4baaa50"
+  ami           = "ami-0b026d11830afcbac"
   instance_type = "t2.micro"
 
   tags = {
-    Name = "ExampleAppServerInstance"
+    Name = "ThisIsAnInstanceOfEC2"
   }
 }
