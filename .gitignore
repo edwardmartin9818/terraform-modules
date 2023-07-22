@@ -1,3 +1,4 @@
 # Ignore terraform init's providers
 .terraform/
 .terragrunt*
+.terragrunt/
